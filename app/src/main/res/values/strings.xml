@@ -6,4 +6,5 @@
     <string name="ola">Ola</string>
     <string name="mensagem_aqui_hehehe">mensagem aqui hehehe</string>
     <string name="botao_aqui">botao aqui</string>
+    <string name="pixmanualtext">Realize transferência Pix utilizando banco,\nagência, conta e dados do recebedor</string>
 </resources>

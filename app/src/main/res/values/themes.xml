@@ -13,4 +13,25 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="TextView3TransferFragment" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:text">Pix Manual</item>
+        <item name="android:textColor">@color/cinza</item>
+        <item name="android:textSize">@dimen/size_18</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView5TransferFragment" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:text">Favoritos</item>
+        <item name="android:textColor">@color/cinza_claro</item>
+        <item name="android:textSize">@dimen/size_17</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView4TransferFragment" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:layout_marginTop">@dimen/spacing_5</item>
+        <item name="android:text">@string/pixmanualtext</item>
+        <item name="android:textColor">@color/cinza_claro</item>
+    </style>
+
 </resources>
