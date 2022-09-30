@@ -6,13 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <br.com.android.customviews.component.LabelValueComponent
+        android:id="@+id/labelValueComponent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:value="10" />
+
+    <br.com.android.customviews.component.LabelValueComponent
+        android:id="@+id/labelValueComponent2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelValueComponent"
+        app:value="123123123123123" />
+
+    <br.com.android.customviews.component.LabelValueComponent
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelValueComponent2"
+        app:value="37821983798127389127893172893781927389127893718293789127893718293789123789127839812738912789371289378189312" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
