@@ -5,4 +5,8 @@
         <attr name="value" format="float" />
     </declare-styleable>
 
+    <declare-styleable name="LabelShowMoneyComponent">
+        <attr name="money" format="float"/>
+    </declare-styleable>
+
 </resources>

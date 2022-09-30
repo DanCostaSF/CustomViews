@@ -32,5 +32,4 @@ class LabelValueComponent @JvmOverloads constructor(
             Toast.makeText(context, "Clicou $paramValue", Toast.LENGTH_SHORT).show()
         }
     }
-
 }
