@@ -14,7 +14,7 @@
     app:layout_constraintStart_toStartOf="parent">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/txv_tittle"
         style="@style/TextView3TransferFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,19 +22,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/txv_subtittle"
         style="@style/TextView4TransferFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView1" />
+        app:layout_constraintTop_toBottomOf="@id/txv_tittle" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_next_24"
         android:backgroundTint="@color/cinza_claro"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

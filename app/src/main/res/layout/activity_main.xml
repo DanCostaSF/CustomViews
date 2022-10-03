@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <br.com.android.customviews.component.LabelValueComponent
-        android:id="@+id/labelValueComponent"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:value="10" />
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
+        <br.com.android.customviews.component.LabelValueComponent
+            android:id="@+id/labelValueComponent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:value="10" />
 
-    <br.com.android.customviews.component.LabelShowMoneyComponent
-        android:id="@+id/lsmc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/labelValueComponent"
-        app:money="100" />
+        <br.com.android.customviews.component.LabelShowMoneyComponent
+            android:id="@+id/lsmc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelValueComponent"
+            app:money="100" />
 
-    <br.com.android.customviews.component.PixManualContentView
-        android:id="@+id/pix"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lsmc" />
+        <br.com.android.customviews.component.PixManualContentView
+            android:id="@+id/pix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:imageview="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lsmc"
+            app:txv_subtittle="true"
+            app:txv_tittle="true" />
 
-    <br.com.android.customviews.component.ViewQueHenriquePediu
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pix" />
+        <br.com.android.customviews.component.PixManualContentView
+            android:id="@+id/pix2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_10"
+            app:imageview="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pix"
+            app:txv_subtittle="true"
+            app:txv_tittle="true" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <br.com.android.customviews.component.PixManualContentView
+            android:id="@+id/pix3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_10"
+            app:imageview="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pix2"
+            app:txv_subtittle="true"
+            app:txv_tittle="true" />
+
+        <br.com.android.customviews.component.ViewQueHenriquePediu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pix3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

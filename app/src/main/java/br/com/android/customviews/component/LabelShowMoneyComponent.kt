@@ -43,13 +43,17 @@ class LabelShowMoneyComponent @JvmOverloads constructor(
 
     private fun onContainerClick() {
         binding.root.setOnClickListener {
-            if (binding.txtValor.visibility == GONE) {
-                binding.txtValor.visibility = VISIBLE
-                binding.txtvToqueVizualizar.visibility = INVISIBLE
-            } else {
-                binding.txtValor.visibility = GONE
-                binding.txtvToqueVizualizar.visibility = VISIBLE
-            }
+            logicVisibility()
+        }
+    }
+
+    private fun logicVisibility() {
+        if (binding.txtValor.visibility == GONE) {
+            binding.txtValor.visibility = VISIBLE
+            binding.txtvToqueVizualizar.visibility = INVISIBLE
+        } else {
+            binding.txtValor.visibility = GONE
+            binding.txtvToqueVizualizar.visibility = VISIBLE
         }
     }
 }
