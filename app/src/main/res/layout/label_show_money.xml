@@ -15,9 +15,10 @@
         <TextView
             android:id="@+id/txtv_saldo_limite"
             android:layout_width="0dp"
-            android:text="@string/saldo_limite"
             android:layout_height="wrap_content"
+            android:text="@string/saldo_limite"
             android:textSize="@dimen/size_14"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/txtv_toque_vizualizar"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,5 +48,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/txtv_saldo_limite"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
