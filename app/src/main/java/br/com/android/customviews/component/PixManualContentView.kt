@@ -3,7 +3,9 @@ package br.com.android.customviews.component
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import br.com.android.customviews.R
@@ -25,6 +27,9 @@ class PixManualContentView @JvmOverloads constructor(
     var txv_subtittle: Boolean? = null
         set(value) {
             binding.txvSubtittle.isVisible(value)
+            if (value == false) {
+                binding.txvTittle.gravity = Gravity.CENTER_HORIZONTAL
+            }
             field = value
         }
 
@@ -47,6 +52,7 @@ class PixManualContentView @JvmOverloads constructor(
         )
         updateParamValue(style)
         onContainerClick()
+
     }
 
     private fun updateParamValue(style: TypedArray) {

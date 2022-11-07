@@ -14,4 +14,8 @@
         <attr name="imageview" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="SeekBarCustom">
+        <attr name="value_seek" format="integer"/>
+        <attr name="type_seek" format="string"/>
+    </declare-styleable>
 </resources>

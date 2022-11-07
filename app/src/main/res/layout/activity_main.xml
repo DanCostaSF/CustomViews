@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="vm"
+            type="br.com.android.customviews.MainViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,37 +43,36 @@
             app:txv_subtittle="true"
             app:txv_tittle="true" />
 
-        <br.com.android.customviews.component.PixManualContentView
-            android:id="@+id/pix2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_10"
-            app:imageview="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pix"
-            app:txv_subtittle="true"
-            app:txv_tittle="true" />
-
-        <br.com.android.customviews.component.PixManualContentView
-            android:id="@+id/pix3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_10"
-            app:imageview="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pix2"
-            app:txv_subtittle="true"
-            app:txv_tittle="true" />
-
-        <br.com.android.customviews.component.ViewQueHenriquePediu
+        <br.com.android.customviews.component.ViewTestQuadrado
+            android:id="@+id/viewQueHenriquePediu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <br.com.android.customviews.component.seekbarcustom.SeekBarCustom
+            android:id="@+id/seekCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pix3" />
+            app:layout_constraintTop_toBottomOf="@+id/pix"
+            app:type_seek="Teste"
+            app:value_seek="@{vm.value}"
+            app:value_item="@={vm.value}" />
+
+        <TextView
+            android:id="@+id/txv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_30"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/seekCV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
